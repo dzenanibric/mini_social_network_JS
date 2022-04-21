@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Network in plain JavaScript</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!--Iconscout cdn-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="assets/images/logo.png" alt="">
+        </div>
+        <div class="nav__menu">
+            <ul class="menu__items">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a id="logout-btn">Logout</a></li>
+            </ul>
+            <a class="menu__btn"><i class="uil uil-bars"></i></a>
+        </div>
+    </nav>
+    <div class="mobile__menu">
+
+    </div>
+    <!----END OF NAVBAR---->
+
+    <div class="profile__container">
+        <div class="profile__picture-change">
+            
+        </div>
+        <form action="upload.php" method="post" enctype="multipart/form-data">
+            <label>Change image:</label>
+            <input type="file" id="choose-file-input" accept="image/jpeg, image/png, image/jpg">
+        </form>
+        <div class="profile__info-b">
+            
+        </div>
+    </div>
+    <script type="module" src="js/profile.js"></script>
+    <script type="module" src="js/navbar.js"></script>
+    <script type="module" src="js/logout.js"></script>
+</body>
+</html>

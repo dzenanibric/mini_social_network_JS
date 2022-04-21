@@ -1,0 +1,110 @@
+
+.login__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background: $color_blue;
+    height: 100vh;
+    overflow: hidden;
+    h4{
+        color: $color_def;
+    }
+    form{
+        margin-top: 3rem;
+        input{
+            margin-left: 1rem;
+            width: 80%;
+        }
+        .username__input{
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .password__input{
+            display: flex;
+            align-items: center;
+        }
+
+        #submit-login-btn{
+            background: $color_dark;
+            color: $color_def;
+            padding: 3px;
+            border: 1px solid $color_dark;
+            transition: $transition;
+            float: right;
+            margin-top: 1rem;
+            &:hover{
+                background: transparent;
+                cursor: pointer;
+            }
+        }
+        .error{
+            display: none;
+            margin-top: 5rem;
+            border: 3px solid red;
+            border-radius: 10px;
+            background: $color_def;
+            padding: 5px;
+            width: 100%;
+            p{
+                text-align: center;
+                color: red;
+            }
+        }
+    }
+}
+
+.picture__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img{
+        width: 70%;
+        height: 70%;
+    }
+}
+
+@media screen and(max-width: 1248px){
+    body{
+        .login__container{
+            form{
+                padding: 10px;
+            }
+        }
+        .picture__container{
+            width: 70%;
+            height: 70%;
+            margin-left: 5rem;
+        }
+    }
+}
+@media screen and(max-width: 900px){
+    body{
+        .login__container{
+            height: 120%;
+            form{
+                padding: 10px;
+            }
+        }
+        .picture__container{
+            margin-top: 5rem;
+            img{
+                width: 100%;
+                height: 100%;
+                margin-left: 5rem;
+            }
+        }
+    }
+}
+@media screen and(max-width: 600px){
+    body{
+        .picture__container{
+            img{
+                margin-left: 0rem;
+            }
+        }
+    }
+}

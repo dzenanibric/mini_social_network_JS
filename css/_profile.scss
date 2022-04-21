@@ -1,0 +1,75 @@
+button{
+    background: $color_dark;
+    color: $color_def;
+    margin-left: 1rem;
+    padding: 0.2rem;
+    transition: $transition;
+    border: 1px solid $color_dark;
+    &:hover{
+        background: transparent;
+        cursor: pointer;
+    }
+}
+
+.profile__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .profile__picture-change{
+        margin-top: 3rem;
+        img{
+            border-radius: 50%;
+            width: 20rem;
+            height: 20rem;
+        }
+    }
+    form{
+        margin-top: 3rem;
+        color: $color_def;
+        #upload-image-btn{
+            width: 4rem;
+            height: 2rem;
+            color: $color_def;
+            background: $color_dark;
+            transition: $transition;
+            &:hover{
+                cursor: pointer;
+                background: transparent;
+                border: 1px solid $color_def;
+            }
+        }
+    }
+    .profile__info-b{
+        height: fit-content;
+        background: $color_dark;
+        margin-top: 2rem;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        p{
+            text-align: center;
+            color: $color_def;
+            font-size: 15px;
+            margin-bottom: 0.5rem;
+            background: $color_light;
+            border-radius: 5px;
+            padding: 5px;
+        }
+    }
+}
+
+@media screen and(max-width: 600px){
+    .profile__container{
+        form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 10rem;
+            #choose-file-input{
+                margin: 1rem 0 1rem 0;
+                margin-left: 5rem;
+            }
+        }
+    }
+}

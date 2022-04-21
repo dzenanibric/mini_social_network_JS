@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Network in plain JavaScript</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!--Iconscout cdn-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+</head>
+<body>
+    
+    <nav>
+        <div class="logo">
+            <img src="assets/images/logo.png" alt="">
+        </div>
+        <h3>SOCIAL NETWORK IN PLAIN JAVASCRIPT</h3>
+        <div class="nav__menu">
+            <ul class="menu__items"> 
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!----END OF NAVBAR---->
+    <div class="container">
+        <div class="login__container">
+            <form>
+                <div class="username__input">
+                    <h4>Username: </h4>
+                    <input type="text" placeholder="Username" id="username-input">
+                </div>
+                <div class="password__input">
+                    <h4>Password: </h4>
+                    <input type="password" placeholder="Password" id="password-input">
+                </div>
+                <a id="submit-login-btn">Login</a>
+                <div class="error">
+                    
+                </div>
+            </form>
+        </div>
+        <div class="picture__container">
+            <img src="./assets/images/login.svg" alt="">
+        </div>
+    </div>
+    <script type="module" src="js/login.js"></script>
+</body>
+</html>

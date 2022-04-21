@@ -1,0 +1,261 @@
+@import "./variables";
+@import "./index";
+@import "./login";
+@import "./profile";
+
+/*----THIS IS SCSS FOR HOME.HTML---*/
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+@mixin displayFlex($direction, $justify){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: center;
+}
+
+body{
+    nav{
+        @include displayFlex(none, space-between);
+        width: 100%;
+        height: 3.5rem;
+        background: $color_dark;
+        .logo{
+            img{
+                margin-top: 0.2rem;
+                margin-left: 1.5rem;
+                width: 3rem;
+                height: 3rem;
+            }
+        }
+        .search{
+            input{
+                width: 30rem;
+                height: 1.5rem;
+                background: $color_def;
+                border-radius: 10px;
+                &::placeholder{
+                    color: $color_dark;
+                }
+            }
+            button{
+                height: 1.5rem;
+                width: 1.5rem;
+                cursor: pointer;
+                background: transparent;
+                border-radius: 10px;
+                transition: $transition;
+                i{
+                    color: $color_def;
+                }
+                &:hover{
+                    background: $color_def;
+                    i{
+                        color: $color_dark;
+                    }
+                }
+            }
+        }
+        .nav__menu{
+            .menu__btn{
+                display: none;
+            }
+            .menu__items{
+                @include displayFlex(none, none);
+                height: 100%;
+                list-style: none;
+                margin-right: 1.5rem;
+                li{
+                    margin-left: 2rem;
+                }
+                a{
+                    color: $color_def;
+                    text-decoration: none;
+                    padding: 5px;
+                    transition: $transition;
+                    cursor: pointer;
+                    &:hover{
+                        box-shadow: 3px 3px 3px $color_shadow;
+                    }
+                }
+            }
+        }
+    }
+    .mobile__menu{
+        display: none;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: 25% 75%;
+        .left__box{
+            background: $color_blue;
+            height: 100vh;
+            @include displayFlex(column, flex-start);
+            .profile__picture{ 
+                margin-top: 3rem;
+                background: $color_def;
+                border-radius: 50%;
+                width: fit-content;
+                height: fit-content;
+                img{
+                    width: 9.5rem;
+                    height: 9.5rem;
+                    border-radius: 50%;
+                }
+            }
+            .profile__info{
+                height: fit-content;
+                background: $color_dark;
+                margin-top: 2rem;
+                padding: 0.5rem;
+                border-radius: 0.5rem;
+                p{
+                    text-align: center;
+                    color: $color_def;
+                    font-size: 15px;
+                    margin-bottom: 0.5rem;
+                    background: $color_light;
+                    border-radius: 5px;
+                    padding: 5px;
+                }
+            }
+        }
+        .right__box{
+            background: $color_light;
+            @include displayFlex(column, flex-start);
+            overflow: hidden;
+            .create__post{
+                margin-top: 3rem;
+                width: 50%;
+                textarea{
+                    border-radius: 0 0 10px 10px;
+                    width: 100%;
+                    background: $color_def;
+                    &::placeholder{
+                        color: $color_dark;
+                    }
+                }
+                h2{
+                    border-radius: 10px 10px 0 0;
+                    text-align: center;
+                    color: $color_def;
+                    background: $color_dark;
+                }
+                #submit-post-btn{
+                    float: right;
+                    background: $color_dark;
+                    padding: 5px;
+                    color: $color_def;
+                    cursor: pointer;
+                    border: 1px solid $color_dark;
+                    transition: $transition;
+                    border-radius: 10px;
+                    &:hover{
+                        background: transparent;
+                        border: 1px solid $color_dark;
+                    }
+                }
+            }
+            .posts{
+                @include displayFlex(column, none);
+                width: 50%;
+                height: 77vh;
+                .one__post{
+                    background: $color_blue;
+                    padding: 0.3rem;
+                    margin-top: 2rem;
+                    width: 100%;
+                    h3{
+                        background: $color_dark;
+                        padding: 0.2rem;
+                    }
+                    p{
+                        margin-top: 0.3rem;
+                        color: $color_def;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and(max-width: 1248px){
+    body{
+        .container{
+            grid-template-columns: 35% 75%;
+            .right__box{
+                width: 75%;
+            }
+        }
+        nav{
+            .search{
+                input{
+                    width: 20rem;
+                }
+            }
+        }
+    }
+}
+@media screen and(max-width: 900px){
+    body{
+        .container{
+            grid-template-columns: 1fr;
+            .left__box{
+                display: none;
+            }
+            .right__box{
+                width: 100%;
+            }
+        }
+        nav{
+            .search{
+                input{
+                    width: 10rem;
+                }
+            }
+            .nav__menu{
+                .menu__btn{
+                    display: block;
+                    color: $color_def;
+                    margin-right: 1.5rem;
+                    cursor: pointer;
+                }
+                .menu__items{
+                    display: none;
+                }
+                .close__menu{
+                    color: $color_def;
+                    margin-right: 1.5rem;
+                    cursor: pointer;
+                }
+            }
+        }
+        .mobile__menu{
+            width: 100%;
+            background: $color_blue;
+            @include displayFlex(column, center);
+            .menu__items{
+                list-style: none;
+                margin-top: 1rem;
+                a{
+                    color: $color_def;
+                    text-decoration: none;
+                    &:hover{
+                        color: $color_dark;
+                    }
+                }
+                li{
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+    }
+}

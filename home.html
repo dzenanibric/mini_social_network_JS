@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Network in plain JavaScript</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!--Iconscout cdn-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+</head>
+<body>
+    
+    <nav>
+        <div class="logo">
+            <img src="assets/images/logo.png" alt="">
+        </div>
+        <div class="search">
+            <input type="text" placeholder="Search..." id="search-input">
+            <button id="search-btn"><i class="uil uil-search-alt"></i></button>
+        </div>
+        <div class="nav__menu">
+            <ul class="menu__items">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a id="logout-btn">Logout</a></li>
+            </ul>
+            <a class="menu__btn"><i class="uil uil-bars"></i></a>
+        </div>
+    </nav>
+    <div class="mobile__menu">
+
+    </div>
+    <!----END OF NAVBAR---->
+
+    <div class="container">
+        <div class="container left__box">
+            <div class="profile__picture">
+                
+            </div>
+            <div class="profile__info">
+
+            </div>
+        </div>
+        <div class="container right__box">
+            <div class="create__post">
+                <h2>Create new post</h2>
+                <textarea name="Create New Post" id="post-content" cols="30" rows="5" placeholder="What's on your mind?"></textarea>
+                <button id="submit-post-btn">POST</button>
+            </div>
+            <div class="posts">
+
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="js/navbar.js"></script>
+    <script type="module" src="js/home.js"></script>
+    <script type="module" src="js/logout.js"></script>
+</body>
+</html>
